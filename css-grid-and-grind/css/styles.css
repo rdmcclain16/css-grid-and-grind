@@ -1,0 +1,93 @@
+/* CSS Variables  */
+:root {
+--primary: #ddd;
+--dark: #333;
+--light: #fff;
+--shadow: 0 1px 5px red;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.btn {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+display: grid;
+grip-gap: 20px;
+}
+
+/* Navigation Start  */
+.main-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main-nav a {
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+    background: var(--dark);
+    color: var(--light);
+}
+
+/* Top Container  */
+.top-container {
+display: grid;
+grid-gap: 20px;
+grid-template-areas: 
+'showcase showcase top-box-a'
+'showcase showcase top-box-b';
+}
+
+/* Showcase */
+.showcase {
+    grid-area: showcase;
+    min-height: 800px;
+    background: url(https://images.nappy.co/uploads/medium/21595523275m7xzmx8c9g4scixl4x4ci4gny1tnyxflybxrhz1pxblyql5f22r2yhxexlsssjnbkk7bzdr0fftbl1qcfb5gipnfnw8h4ix8eeqa.jpg?sharp=13);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    
+}
+
